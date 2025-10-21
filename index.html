@@ -70,29 +70,28 @@
 
         .btn-primary:hover {
             background-color: #d91f6f;
-            transform: translateY(-1px);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(239, 37, 127, 0.3);
         }
 
-        .accent-pink {
-            color: #EF257F;
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
         }
 
-        .bg-accent-pink {
-            background-color: #EF257F;
+        .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
         }
 
-        .border-accent-pink {
-            border-color: #EF257F;
+        .service-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .section-heading::after {
-            content: '';
-            display: block;
-            width: 80px;
-            height: 4px;
-            background-color: #EF257F;
-            margin: 1rem auto 0;
-            border-radius: 2px;
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
         }
 
         .testimonial-card {
@@ -129,7 +128,7 @@
                     <a href="#about" class="text-gray-700 hover:text-emerald-800 transition font-medium">About</a>
                     <a href="#portfolio" class="text-gray-700 hover:text-emerald-800 transition font-medium">Portfolio</a>
                     <a href="#testimonials" class="text-gray-700 hover:text-emerald-800 transition font-medium">Testimonials</a>
-                    <a href="#contact" class="btn-primary text-white px-6 py-2 rounded-md font-medium">Contact</a>
+                    <a href="#contact" class="bg-emerald-800 text-white px-6 py-2 rounded-md hover:bg-emerald-900 transition font-medium">Contact</a>
                 </div>
 
                 <!-- Mobile Menu Button -->
@@ -154,7 +153,7 @@
                     <a href="#about" class="menu-link text-gray-700 hover:text-emerald-800 transition font-medium text-lg">About</a>
                     <a href="#portfolio" class="menu-link text-gray-700 hover:text-emerald-800 transition font-medium text-lg">Portfolio</a>
                     <a href="#testimonials" class="menu-link text-gray-700 hover:text-emerald-800 transition font-medium text-lg">Testimonials</a>
-                    <a href="#contact" class="menu-link btn-primary text-white px-6 py-3 rounded-md font-medium text-lg text-center">Contact</a>
+                    <a href="#contact" class="menu-link bg-emerald-800 text-white px-6 py-3 rounded-md hover:bg-emerald-900 transition font-medium text-lg text-center">Contact</a>
                 </div>
             </div>
         </div>
@@ -186,8 +185,8 @@
     <!-- Services Section -->
     <section id="services" class="py-20 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="section-heading font-serif text-5xl font-bold text-emerald-900 mb-4">Our Services</h2>
+            <div class="text-center mb-16 fade-in-up">
+                <h2 class="font-serif text-5xl font-bold text-emerald-900 mb-4">Our Services</h2>
                 <p class="text-xl text-gray-600 max-w-2xl mx-auto">
                     From vegetable gardens to pollinator havens, we help you grow what you love
                 </p>
@@ -195,9 +194,9 @@
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Service 1 -->
-                <div class="bg-white p-8 rounded-lg shadow-md">
-                    <div class="w-16 h-16 bg-pink-50 rounded-full flex items-center justify-center mb-6" style="background-color: rgba(239, 37, 127, 0.1);">
-                        <svg class="w-8 h-8 accent-pink" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div class="service-card bg-white p-8 rounded-lg shadow-md fade-in-up">
+                    <div class="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-emerald-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
                         </svg>
                     </div>
@@ -208,9 +207,9 @@
                 </div>
 
                 <!-- Service 2 -->
-                <div class="bg-white p-8 rounded-lg shadow-md">
-                    <div class="w-16 h-16 rounded-full flex items-center justify-center mb-6" style="background-color: rgba(239, 37, 127, 0.1);">
-                        <svg class="w-8 h-8 accent-pink" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div class="service-card bg-white p-8 rounded-lg shadow-md fade-in-up">
+                    <div class="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-emerald-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                         </svg>
                     </div>
@@ -221,9 +220,9 @@
                 </div>
 
                 <!-- Service 3 -->
-                <div class="bg-white p-8 rounded-lg shadow-md">
-                    <div class="w-16 h-16 rounded-full flex items-center justify-center mb-6" style="background-color: rgba(239, 37, 127, 0.1);">
-                        <svg class="w-8 h-8 accent-pink" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div class="service-card bg-white p-8 rounded-lg shadow-md fade-in-up">
+                    <div class="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-emerald-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path>
                         </svg>
                     </div>
@@ -234,9 +233,9 @@
                 </div>
 
                 <!-- Service 4 -->
-                <div class="bg-white p-8 rounded-lg shadow-md">
-                    <div class="w-16 h-16 rounded-full flex items-center justify-center mb-6" style="background-color: rgba(239, 37, 127, 0.1);">
-                        <svg class="w-8 h-8 accent-pink" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div class="service-card bg-white p-8 rounded-lg shadow-md fade-in-up">
+                    <div class="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-emerald-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
                         </svg>
                     </div>
@@ -247,9 +246,9 @@
                 </div>
 
                 <!-- Service 5 -->
-                <div class="bg-white p-8 rounded-lg shadow-md">
-                    <div class="w-16 h-16 rounded-full flex items-center justify-center mb-6" style="background-color: rgba(239, 37, 127, 0.1);">
-                        <svg class="w-8 h-8 accent-pink" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div class="service-card bg-white p-8 rounded-lg shadow-md fade-in-up">
+                    <div class="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-emerald-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
                         </svg>
                     </div>
@@ -260,9 +259,9 @@
                 </div>
 
                 <!-- Service 6 -->
-                <div class="bg-white p-8 rounded-lg shadow-md">
-                    <div class="w-16 h-16 rounded-full flex items-center justify-center mb-6" style="background-color: rgba(239, 37, 127, 0.1);">
-                        <svg class="w-8 h-8 accent-pink" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div class="service-card bg-white p-8 rounded-lg shadow-md fade-in-up">
+                    <div class="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-emerald-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"></path>
                         </svg>
                     </div>
@@ -319,8 +318,8 @@
     <!-- Portfolio Section -->
     <section id="portfolio" class="py-20 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="section-heading font-serif text-5xl font-bold text-emerald-900 mb-4">Our Work</h2>
+            <div class="text-center mb-16 fade-in-up">
+                <h2 class="font-serif text-5xl font-bold text-emerald-900 mb-4">Our Work</h2>
                 <p class="text-xl text-gray-600 max-w-2xl mx-auto">
                     A selection of gardens we've had the privilege to create and nurture
                 </p>
@@ -328,7 +327,7 @@
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- Portfolio Item 1 -->
-                <div class="portfolio-item rounded-lg overflow-hidden shadow-lg">
+                <div class="portfolio-item rounded-lg overflow-hidden shadow-lg fade-in-up">
                     <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                          alt="Texas Native Garden"
                          class="w-full h-80 object-cover">
@@ -339,7 +338,7 @@
                 </div>
 
                 <!-- Portfolio Item 2 -->
-                <div class="portfolio-item rounded-lg overflow-hidden shadow-lg">
+                <div class="portfolio-item rounded-lg overflow-hidden shadow-lg fade-in-up">
                     <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                          alt="Cottage Garden"
                          class="w-full h-80 object-cover">
@@ -350,7 +349,7 @@
                 </div>
 
                 <!-- Portfolio Item 3 -->
-                <div class="portfolio-item rounded-lg overflow-hidden shadow-lg">
+                <div class="portfolio-item rounded-lg overflow-hidden shadow-lg fade-in-up">
                     <img src="https://images.unsplash.com/photo-1591857177423-4705b7d43c9d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                          alt="Herb Garden"
                          class="w-full h-80 object-cover">
@@ -361,7 +360,7 @@
                 </div>
 
                 <!-- Portfolio Item 4 -->
-                <div class="portfolio-item rounded-lg overflow-hidden shadow-lg">
+                <div class="portfolio-item rounded-lg overflow-hidden shadow-lg fade-in-up">
                     <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                          alt="Shade Garden"
                          class="w-full h-80 object-cover">
@@ -372,7 +371,7 @@
                 </div>
 
                 <!-- Portfolio Item 5 -->
-                <div class="portfolio-item rounded-lg overflow-hidden shadow-lg">
+                <div class="portfolio-item rounded-lg overflow-hidden shadow-lg fade-in-up">
                     <img src="https://images.unsplash.com/photo-1598902108854-10e335adac99?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                          alt="Vegetable Garden"
                          class="w-full h-80 object-cover">
@@ -383,7 +382,7 @@
                 </div>
 
                 <!-- Portfolio Item 6 -->
-                <div class="portfolio-item rounded-lg overflow-hidden shadow-lg">
+                <div class="portfolio-item rounded-lg overflow-hidden shadow-lg fade-in-up">
                     <img src="https://images.unsplash.com/photo-1591868552047-f55d0b2a9d93?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                          alt="Pollinator Garden"
                          class="w-full h-80 object-cover">
@@ -399,8 +398,8 @@
     <!-- Testimonials Section -->
     <section id="testimonials" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="section-heading font-serif text-5xl font-bold text-emerald-900 mb-4">Client Stories</h2>
+            <div class="text-center mb-16 fade-in-up">
+                <h2 class="font-serif text-5xl font-bold text-emerald-900 mb-4">Client Stories</h2>
                 <p class="text-xl text-gray-600 max-w-2xl mx-auto">
                     Hear from the homeowners we've had the pleasure of working with
                 </p>
@@ -408,9 +407,9 @@
 
             <div class="grid md:grid-cols-3 gap-8">
                 <!-- Testimonial 1 -->
-                <div class="testimonial-card bg-gray-50 p-8 rounded-lg shadow-md">
+                <div class="testimonial-card bg-gray-50 p-8 rounded-lg shadow-md fade-in-up">
                     <div class="flex items-center mb-4">
-                        <svg class="w-8 h-8 accent-pink" fill="currentColor" viewBox="0 0 24 24">
+                        <svg class="w-8 h-8 text-emerald-800" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
                         </svg>
                     </div>
@@ -424,9 +423,9 @@
                 </div>
 
                 <!-- Testimonial 2 -->
-                <div class="testimonial-card bg-gray-50 p-8 rounded-lg shadow-md">
+                <div class="testimonial-card bg-gray-50 p-8 rounded-lg shadow-md fade-in-up">
                     <div class="flex items-center mb-4">
-                        <svg class="w-8 h-8 accent-pink" fill="currentColor" viewBox="0 0 24 24">
+                        <svg class="w-8 h-8 text-emerald-800" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
                         </svg>
                     </div>
@@ -440,9 +439,9 @@
                 </div>
 
                 <!-- Testimonial 3 -->
-                <div class="testimonial-card bg-gray-50 p-8 rounded-lg shadow-md">
+                <div class="testimonial-card bg-gray-50 p-8 rounded-lg shadow-md fade-in-up">
                     <div class="flex items-center mb-4">
-                        <svg class="w-8 h-8 accent-pink" fill="currentColor" viewBox="0 0 24 24">
+                        <svg class="w-8 h-8 text-emerald-800" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
                         </svg>
                     </div>
@@ -461,8 +460,8 @@
     <!-- Contact Section -->
     <section id="contact" class="py-20 bg-emerald-900">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="section-heading font-serif text-5xl font-bold text-white mb-4">Let's Grow Together</h2>
+            <div class="text-center mb-12 fade-in-up">
+                <h2 class="font-serif text-5xl font-bold text-white mb-4">Let's Grow Together</h2>
                 <p class="text-xl text-emerald-100">
                     Ready to transform your outdoor space? We'd love to hear about your garden dreams.
                 </p>
@@ -586,6 +585,22 @@
     </footer>
 
     <script>
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
+
         // Mobile menu functionality
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
